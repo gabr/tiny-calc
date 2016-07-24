@@ -1,0 +1,195 @@
+/**
+ * COLORS
+ * ------
+ *
+ * background: #dbdbdb
+ * main:       #ddd;
+ * accent:     #346eff
+ * screen:     #202020
+ * button:     #383838
+ * action:     #252525
+ */
+
+
+html,
+body {
+  background-color: #dbdbdb;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 18px;
+  font-weight: lighter;;
+}
+::selection {
+  background-color: #346eff;
+  color: #fff;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.header {
+  position: absolute;
+  top: -30px;
+}
+.header h1,
+.header a {
+  display: inline;
+}
+.header__logo {
+  font-size: 14px;
+  font-weight: lighter;
+}
+.header__logo span {
+  font-weight: bold;
+}
+.header__author {
+  color: #346eff;
+  font-family: monospace;
+  font-size: 8px;
+  font-weight: 100;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.calc {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 100%;
+}
+.calc__screen {
+  background-color: #202020;
+  height: 25%;
+  width: 100%;
+}
+.calc__buttons {
+  background-color: #fff;
+  height: 75%;
+  width: 100%;
+}
+.calc__buttons:after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+.screen {
+  height: 100%;
+  width: 100%;
+  color: #ddd;
+}
+.screen:after {
+  clear: both;
+  content: '';
+  display: block;
+}
+.screen__button,
+.screen__content-wrapper {
+  float: left;
+}
+.screen__button {
+  background: transparent;
+  height: 100%;
+  width: 70px;
+  border: none;
+  outline: none;
+  padding: 0 0 0 20px;
+  cursor: pointer;
+}
+.screen__button:hover .icon {
+  opacity: 0.6;
+}
+.screen__button:active .icon {
+  opacity: 0.8;
+}
+.screen__button .icon {
+  opacity: 0.3;
+}
+.screen__content-wrapper {
+  height: calc(100% - 40px);
+  width: calc(100% - 70px - 40px);
+  padding: 20px 20px;
+  text-align: right;
+}
+.screen__content {
+  line-height: 1;
+  overflow: hidden;
+}
+.screen__content--main {
+  font-size: 36px;
+}
+.screen__content--second {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.icon {
+  display: block;
+  height: 32px;
+  width: 32px;
+  background: transparent url('icons.svg');
+  background-repeat: no-repeat;
+}
+.icon--arrow {
+  background-position: 0;
+}
+.icon--remove {
+  background-position: 100%;
+}
+
+.button {
+  background-color: #383838;
+  border: none;
+  color: #ddd;
+  cursor: pointer;
+  display: block;
+  float: left;
+  height: 25%;
+  width: 25%;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+}
+.button:active {
+  opacity: 0.95;
+}
+.button:after {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  transition: all 0.2s ease-out;
+  display: block;
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 30%;
+  left: 50%;
+}
+.button:hover:after,
+.button:active:after {
+  width: 150%;
+  height: 150%;
+  top: -25%;
+  left: -25%;
+}
+.button--action {
+  background-color: #252525;
+}
+.button--accent {
+  background-color: #346eff;
+}
+
+@media (min-height: 490px) and (min-width: 310px) {
+  .container {
+    width: 300px;
+    height: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+  }
+}
