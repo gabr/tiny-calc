@@ -22,6 +22,9 @@ body {
   background-color: #346eff;
   color: #fff;
 }
+button:-moz-focusring {
+  outline: none;
+}
 
 .hidden {
   display: none;
@@ -143,16 +146,17 @@ body {
 
 .button {
   background-color: #383838;
+  border-radius: 0;
   border: none;
   color: #ddd;
   cursor: pointer;
   display: block;
   float: left;
-  height: 25%;
-  width: 25%;
   outline: none;
-  position: relative;
   overflow: hidden;
+  position: relative;
+  width: 25%;
+  height: 25%;
 }
 .button:active {
   opacity: 0.95;
