@@ -23,6 +23,10 @@ body {
   color: #fff;
 }
 
+.hidden {
+  display: none;
+}
+
 .container {
   height: 100%;
   width: 100%;
@@ -37,24 +41,17 @@ body {
   position: absolute;
   top: -30px;
 }
-.header h1,
-.header a {
-  display: inline;
-}
-.header__logo {
-  font-size: 14px;
-  font-weight: lighter;
-}
-.header__logo span {
-  font-weight: bold;
-}
-.header__author {
+.header__link {
   color: #346eff;
   font-family: monospace;
   font-size: 8px;
-  font-weight: 100;
-  text-decoration: none;
+  letter-spacing: 1px;
   margin-left: 5px;
+  text-decoration: none;
+}
+.header__link:hover,
+.header__link:active {
+  text-decoration: underline;
 }
 
 .calc {
@@ -119,6 +116,8 @@ body {
 .screen__content {
   line-height: 1;
   overflow: hidden;
+  text-overflow: ellipsis;: hidden;
+  white-space: nowrap;
 }
 .screen__content--main {
   font-size: 36px;
